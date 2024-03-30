@@ -1,12 +1,9 @@
 # include <iostream>
 using namespace std;
 
-void counting (int n ){
-    cout<<" counting is";
-     for( int i=1; i<=n; i++){
-        cout <<"  "<<i;
-        }
-     cout<<endl;
+int ap (int n ){
+     int ans=3*n+7;
+      return ans;
 }
 
  
@@ -15,7 +12,7 @@ int main(){
   int n;
   cout<<"Enter the value of n";
   cin >>n;
-  counting (n);
+  cout<<ap(n);
   return 0;
 
 }
