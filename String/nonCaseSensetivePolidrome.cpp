@@ -16,7 +16,7 @@ bool checkPalindrome(char a[], int n){
     int s=0;
     int e= n-1;
     while(s<=e){
-        if(a[s] != a[e]){
+        if(toLowerCase(a[s]) != toLowerCase(a[e])){ //first conver lower case then compare
     return false;
         }
         else{
