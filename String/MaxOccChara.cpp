@@ -32,7 +32,7 @@ char MaxOccChara(string s){
 }
 
 int main(){
-    cout<<" Enter the string  "<< endl;
+    cout<<" Enter the string  to Count Max occurence"<< endl;
     string s;
     cin>> s;
     cout<<MaxOccChara(s)<<endl;
