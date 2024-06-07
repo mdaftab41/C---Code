@@ -1,34 +1,37 @@
-# include <iostream>
+# include<iostream>
 using namespace std;
-bool binarySearch( int arr[], int size , int key ){
-    if(size == 0)
-    return false ;
+bool binarySearch( int arr[], int s , int e , int k ){
+    if(e<s){
+        return false ;
+    }
 
-    if( arr[0] == key){ 
+    int mid= (s+e)/2;
+
+    if(k==arr[mid]){
         return true ;
     }
-    bool Remaining = binarySearch(arr+1 , size-1 , key);
-    return Remaining ;
+    
+    if(k < arr[ mid]){
+    return binarySearch(arr , s , mid-1 , k);
+    }
+    else{
+        return binarySearch(arr , mid+1 , e, k);
+    }
 }
 
-
- int main() {
-    int arr[8]={4,5,2,4,2,6,7,8};
-    int key = 5;
-    int n= 8;
-    bool ans = binarySearch(arr, n , key);
+int main(){
+   int arr[8]={4,6,8,14,15,18,35,38};
+    int key = 34;
+    int e= 8;
+    int s=0;
+    bool ans= binarySearch(arr , s, e , key );
     if(ans){
-        cout<<" Element found"<<endl;
+        cout<<"Element is found"<<endl;
+
     }
-    else
-    {
-     cout<<"Element not found"<<endl ;
+    else{
+        cout<<"Element is not found"<<endl;
     }
-
-
-
     return 0;
+
 }
-
- 
-
