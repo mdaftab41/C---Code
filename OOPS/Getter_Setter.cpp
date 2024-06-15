@@ -23,8 +23,11 @@ class student {
 };
 
 int main(){
-    student obj1;
-    cout<< "Sze of obj1 :"<< sizeof(obj1)<<endl;
+    student obj1; // Statis allocation of object 
+    //Dynamic Allocation of object 
+    cout<<"Size of obj1 :"<< sizeof(obj1)<<endl;
+    student *obj2 = new student;
+    cout<< " Size of obj2 : " << sizeof(obj2) <<endl ;
      
    // obj1.name="Aftabalam";
     obj1.rollNo= 19;
