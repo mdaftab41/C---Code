@@ -13,11 +13,11 @@ class student {
     student(){
         cout<<"constucter call"<<endl ;
     }
-    void setName( string nam){
-        name = nam;
+    void setName( string name){
+        this->name = name;// use this for current context 
     }
-    void setState( string st){
-        state = st;
+    void setState( string state){
+        this->state = state;
     }
     string getName(){
         return name;
