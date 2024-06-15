@@ -24,6 +24,7 @@ class student {
 
 int main(){
     student obj1;
+    cout<< "Sze of obj1 :"<< sizeof(obj1)<<endl;
      
    // obj1.name="Aftabalam";
     obj1.rollNo= 19;
