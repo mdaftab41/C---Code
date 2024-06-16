@@ -8,13 +8,25 @@ class student {
     int rollNo;
     string subject ;
     int Marks ;
+    // constructer for private element 
    student( string name , string state){
     this->name=name;
     this->state=state ;
 
    }
+  // constrcter for public Element
+  student ( int rollNo , string subject , int Marks){
+    this->rollNo= rollNo;
+    this->subject = subject ;
+    this->Marks = Marks ;
+  }
    void print(){
     cout<<name<<endl<<state<<endl;
+   // cout<<rollNo << endl <<subject <<endl <<Marks <<endl ;
+   }
+   void printsub(){
+    //cout<<name<<endl<<state<<endl;
+    cout<<rollNo << endl<<subject <<endl <<Marks <<endl ;
    }
 
 
@@ -40,7 +52,9 @@ class student {
 int main(){
 
  student temp("Aftab" , " Bihar");
+ student pub(13 , "Math" , 95);
  temp.print();
+ pub.printsub();
 //     cout<< "object Created " <<endl;
 //     student obj1; // Statis allocation of object 
 //     //Dynamic Allocation of object 
