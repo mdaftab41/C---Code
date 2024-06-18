@@ -64,10 +64,16 @@ int main(){
  pub.printsub();
 
  // copy constructer created defult and manually 
- //student cp(pub);
- student cp =student sub;
+ student cp(pub);
+ //student cp =student pub;
  
  cp.printsub();
+ // copy assignment 
+ cout<<"copy sub element into sub"<<endl;
+ temp=pub;
+ temp.printsub();
+ pub.printsub();
+
 //     cout<< "object Created " <<endl;
 //     student obj1; // Statis allocation of object 
 //     //Dynamic Allocation of object 
