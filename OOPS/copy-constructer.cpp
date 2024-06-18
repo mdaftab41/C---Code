@@ -64,7 +64,8 @@ int main(){
  pub.printsub();
 
  // copy constructer created defult and manually 
- student cp(pub);
+ //student cp(pub);
+ student cp =student sub;
  
  cp.printsub();
 //     cout<< "object Created " <<endl;
