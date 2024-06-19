@@ -18,6 +18,12 @@ using namespace std;
         this->rollNo=rollNo;
         this->subject=subject;
     }
+
+    // static function only access the static member
+    static int random(){
+       
+        return  timeToComplete;
+    }
 };
 int student :: timeToComplete =10;
 
@@ -30,6 +36,9 @@ int student :: timeToComplete =10;
     cout<<student::timeToComplete<<endl;
     cout<<"Accessing static Variable using object"<<endl;
    cout<< temp.timeToComplete<<endl;
+     cout<<"Static function call"<<endl;
+   cout<<student::timeToComplete<<endl;
+
     
     return 0;
 }
