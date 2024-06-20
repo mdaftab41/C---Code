@@ -31,6 +31,30 @@ void InsertionAtFirst(Node*&head,int data){
     
 }
 
+void InsertionAtPos( Node*&head , int pos , int data){
+  Node* posNode = new Node(data);
+  Node* temp= head;
+  if(pos==1){
+    temp->next=head;
+    head=temp;
+    return ;
+  }
+  int cnt =1;
+  while(cnt != pos-1 && temp != NULL){
+    temp=temp->next;
+    cnt++;
+
+  }
+  if(temp==NULL){
+    cout << "Position is out of bounds" << endl;
+        delete posNode; // Clean up memory if position is invalid
+        return;
+  }
+   posNode->next=temp->next;
+  temp->next =posNode;
+  
+}
+
 void InsertionAtLast(  Node* &head ,int data ){
     Node* tail = head ;
     Node* lastNode= new Node(data);
@@ -63,6 +87,7 @@ int main(){
     InsertionAtLast(head , 60);
     InsertionAtLast(head , 70);
     InsertionAtLast(head , 80);
+    InsertionAtPos(head ,12 ,90);
 
     print(head);
 
