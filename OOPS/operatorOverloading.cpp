@@ -5,9 +5,10 @@ class B{
     public:
     int a;
     void operator+( B obj ){
-        int val1= this->a ;
-        int val2 =obj.a;
-        cout<<"Subtraction of two number is :"<< val1-val2<<endl;
+        // int val1= this->a ;
+        // int val2 =obj.a;
+        // cout<<"Subtraction of two number is :"<< val1-val2<<endl;
+        cout<<"Hello Alam Bhai"<<endl;
     }
 };
 
