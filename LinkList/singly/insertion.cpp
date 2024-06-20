@@ -31,8 +31,22 @@ void InsertionAtFirst(Node*&head,int data){
     
 }
 
+void InsertionAtLast(  Node* &head ,int data ){
+    Node* tail = head ;
+    Node* lastNode= new Node(data);
+     if (head == nullptr) {
+        // If the list is empty, the new node becomes the head
+        head = lastNode;
+    }
+    while(tail->next!=NULL){
+        tail=tail->next;
+    }
+   tail->next=lastNode;
+   
+}
+
 void print(Node* &head){ 
-    while(head->next!=NULL){
+    while(head!=NULL){
         cout<<head->data <<" ";
         head=head->next;
     }
@@ -46,6 +60,9 @@ int main(){
     InsertionAtFirst(head,30);
     InsertionAtFirst(head,40);
     InsertionAtFirst(head,50);
+    InsertionAtLast(head , 60);
+    InsertionAtLast(head , 70);
+    InsertionAtLast(head , 80);
 
     print(head);
 
