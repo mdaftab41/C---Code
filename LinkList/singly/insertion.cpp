@@ -23,6 +23,8 @@ class Node{
 
 };
 
+//function to insert the node at first position 
+
 void InsertionAtFirst(Node*&head,int data){
     
     Node* newNode=new Node(data);
@@ -30,6 +32,9 @@ void InsertionAtFirst(Node*&head,int data){
     head=newNode;
     
 }
+
+
+//function to insert the node at any position 
 
 void InsertionAtPos( Node*&head , int pos , int data){
   Node* posNode = new Node(data);
@@ -46,7 +51,7 @@ void InsertionAtPos( Node*&head , int pos , int data){
 
   }
   if(temp==NULL){
-    cout << "Position is out of bounds" << endl;
+    cout << "Position is out of bounds to add node" << endl;
         delete posNode; // Clean up memory if position is invalid
         return;
   }
@@ -55,10 +60,13 @@ void InsertionAtPos( Node*&head , int pos , int data){
   
 }
 
+
+//function to insert hte node at Last position 
+
 void InsertionAtLast(  Node* &head ,int data ){
     Node* tail = head ;
     Node* lastNode= new Node(data);
-     if (head == nullptr) {
+     if (head == NULL) {
         // If the list is empty, the new node becomes the head
         head = lastNode;
     }
@@ -68,6 +76,10 @@ void InsertionAtLast(  Node* &head ,int data ){
    tail->next=lastNode;
    
 }
+
+ 
+
+// function to print hte node or travel the node node
 
 void print(Node* &head){ 
     while(head!=NULL){
@@ -87,7 +99,8 @@ int main(){
     InsertionAtLast(head , 60);
     InsertionAtLast(head , 70);
     InsertionAtLast(head , 80);
-    InsertionAtPos(head ,12 ,90);
+    InsertionAtPos(head ,11 ,90);
+    
 
     print(head);
 
