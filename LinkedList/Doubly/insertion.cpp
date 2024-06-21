@@ -12,6 +12,15 @@ class Node{
         this->prev=nullptr;
         this->next=nullptr;
     }
+     ~Node() {
+        int value = this -> data;
+        //memory free
+        if(this->next != NULL) {
+            delete next;
+            this->next = NULL;
+        }
+        cout << " memory is free for node with data " << value << endl;
+    }
 };
 
 // function to travels the node or print the node
@@ -50,19 +59,35 @@ void InsertionAtLast(Node* &head ,int data){
 // insertion At any position
 void InsertionAtAnyPos(Node*& head , int pos , int data){
     Node* newNode = new Node(data);
-    Node* temp = head ;
-    if(head==nullptr){
-        head=newNode;
-        return ;
-    }
     
-    if( pos > 1 && temp!=nullptr){
+
+    if (pos == 1) {
+        // If inserting at the head
+        newNode->next = head;
+        newNode->prev = NULL;
+        if (head != NULL) {
+            head->prev = newNode;
+        }
+        head = newNode;
+        return;
+    }
+    Node* temp = head ;
+    while( pos >2 && temp!=NULL){
+        cout<<pos<<"enter in loop"<<endl;
         temp=temp->next ;
         pos--;
     }
     if(temp==nullptr){
-        cout<<"position is outside the boundery"<<endl;
+        cout<< "position is outside the boundery"<<endl;
+        delete temp;
     }
+    newNode->next = temp->next;
+    newNode->prev = temp;
+    if (temp->next != nullptr) {
+        temp->next->prev = newNode;
+    }
+    temp->next = newNode;
+
 }
 
  
@@ -74,6 +99,7 @@ int main(){
     InsertionAtFirst(head ,20);
     InsertionAtFirst(head ,10);
     InsertionAtLast(head , 50);
+    InsertionAtAnyPos(head,7,60);
     print(head);
     
     
