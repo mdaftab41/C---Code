@@ -15,9 +15,9 @@ class Node{
      ~Node() {
         int value = this -> data;
         //memory free
-        if(this->next != NULL) {
+        if(next != NULL) {
             delete next;
-            this->next = NULL;
+            next = NULL;
         }
         cout << " memory is free for node with data " << value << endl;
     }
@@ -73,13 +73,13 @@ void InsertionAtAnyPos(Node*& head , int pos , int data){
     }
     Node* temp = head ;
     while( pos >2 && temp!=NULL){
-        cout<<pos<<"enter in loop"<<endl;
         temp=temp->next ;
         pos--;
     }
     if(temp==nullptr){
         cout<< "position is outside the boundery"<<endl;
-        delete temp;
+        delete newNode;
+        return;
     }
     newNode->next = temp->next;
     newNode->prev = temp;
@@ -90,6 +90,45 @@ void InsertionAtAnyPos(Node*& head , int pos , int data){
 
 }
 
+// function to delete the node 
+void DeleteNode(Node*&head , int pos){
+    if(head == NULL){
+        cout<<"No Node is Present in the LinkedList"<<endl;
+        return;
+    }
+    Node* current =head;
+    Node* previous = head;
+    int cnt = 1;
+    if(pos == 1){
+        current = current->next;
+        head = current;
+        current->prev = NULL;
+        return ;
+
+    }
+    
+    while(cnt < pos && current != NULL){
+            previous = current ;
+            current= current->next;
+            cnt++;
+        }
+        if(current == NULL){
+            cout<<"Position is outside the boundery"<<endl ;
+            return ;
+        }
+        if(current->next == NULL){
+            previous->next=current->next ;
+            current->prev=NULL ;
+            delete current;
+            return;
+        }
+        previous->next=current->next ;
+        current->next->prev = previous ;
+        current->next =NULL ;
+        current->prev =NULL ;
+        delete current ;
+    
+}
  
 
 int main(){
@@ -100,6 +139,12 @@ int main(){
     InsertionAtFirst(head ,10);
     InsertionAtLast(head , 50);
     InsertionAtAnyPos(head,7,60);
+    print(head);
+    DeleteNode(head , 5);
+      print(head);
+     DeleteNode(head , 1);
+       print(head);
+     DeleteNode(head , 2);
     print(head);
     
     
