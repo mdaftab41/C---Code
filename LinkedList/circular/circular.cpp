@@ -163,32 +163,32 @@ int main() {
    print(tail);
 
 
-    insertNode(tail, 5, 7);
-    print(tail);
+    // insertNode(tail, 5, 7);
+    // print(tail);
 
-    insertNode(tail, 7, 9);
-    print(tail);
+    // insertNode(tail, 7, 9);
+    // print(tail);
 
-    insertNode(tail, 5, 6);
-    print(tail);
+    // insertNode(tail, 5, 6);
+    // print(tail);
     
-    insertNode(tail, 9, 10);
-    print(tail);
+    // insertNode(tail, 9, 10);
+    // print(tail);
 
-    insertNode(tail, 3, 4);
-    print(tail);
+    // insertNode(tail, 3, 4);
+    // print(tail);
    
 
-    deleteNode(tail, 5);
+    //deleteNode(tail, 5);
     print(tail);
      
 
-    if(isCircularList(tail)) {
-        cout << " Linked List is Circular in nature" << endl;
-    }
-    else{
-        cout << "Linked List is not Circular " << endl;
-    }
+    // if(isCircularList(tail)) {
+    //     cout << " Linked List is Circular in nature" << endl;
+    // }
+    // else{
+    //     cout << "Linked List is not Circular " << endl;
+    // }
 
     return 0;
 }
