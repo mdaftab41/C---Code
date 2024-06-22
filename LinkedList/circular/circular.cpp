@@ -156,11 +156,11 @@ int main() {
 
     Node* tail = NULL;
 
-   // insertNode(tail, 5, 3);
-    //print(tail);
+   insertNode(tail, 5, 3);
+    print(tail);
 
-  //  insertNode(tail, 3, 5);
-   // print(tail);
+   insertNode(tail, 3, 5);
+   print(tail);
 
 
     insertNode(tail, 5, 7);
@@ -183,12 +183,12 @@ int main() {
     print(tail);
      
 
-    // if(isCircularList(tail)) {
-    //     cout << " Linked List is Circular in nature" << endl;
-    // }
-    // else{
-    //     cout << "Linked List is not Circular " << endl;
-    // }
+    if(isCircularList(tail)) {
+        cout << " Linked List is Circular in nature" << endl;
+    }
+    else{
+        cout << "Linked List is not Circular " << endl;
+    }
 
     return 0;
 }
