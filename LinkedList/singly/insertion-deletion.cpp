@@ -136,7 +136,7 @@ bool isCircularList(Node* head) {
     return false;
 }
 
-
+// function to detect loop
 bool detectLoop(Node* head) {
 
     if(head == NULL)
