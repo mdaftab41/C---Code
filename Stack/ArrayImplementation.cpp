@@ -32,25 +32,27 @@ class stack{
         top--;
     }
   }
-  int peek( int top){
+  int peek(){
     if(top>= 0){
-        cout<<arr[top] <<endl ;
+        return arr[top];
         
     }
     {
         cout<<"Stack underFlow "<<endl;
+        return -1;
     }
   }
-}
+};
 
 int main(){
-  stack st ;
+  stack st(10) ;
   st.push(5);
+  cout<< st.peek();
   st.push(8);
   st.push(6);
   st.push(3);
-  st.peek();
+ cout<< st.peek()<<endl;
   st.pop();
-  st.peek();
+ cout<< st.peek();
   return 0;
 }
