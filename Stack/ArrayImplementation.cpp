@@ -46,4 +46,11 @@ class stack{
 int main(){
   stack st ;
   st.push(5);
+  st.push(8);
+  st.push(6);
+  st.push(3);
+  st.peek();
+  st.pop();
+  st.peek();
+  return 0;
 }
