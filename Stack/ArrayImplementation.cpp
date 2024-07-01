@@ -32,8 +32,18 @@ class stack{
         top--;
     }
   }
+  int peek( int top){
+    if(top>= 0){
+        cout<<arr[top] <<endl ;
+        
+    }
+    {
+        cout<<"Stack underFlow "<<endl;
+    }
+  }
 }
 
 int main(){
-  
+  stack st ;
+  st.push(5);
 }
