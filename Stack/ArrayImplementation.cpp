@@ -11,9 +11,10 @@ class stack{
   stack(int size ){
   this->size=size ;
   arr = new int[size];//Dynamic allocation of array 
+  int top= -1;
   }
 }
 
 int main(){
-
+  
 }
