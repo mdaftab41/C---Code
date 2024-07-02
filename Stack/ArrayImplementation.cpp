@@ -11,12 +11,13 @@ class stack{
   stack(int size ){
   this->size=size ;
   arr = new int[size];//Dynamic allocation of array 
-  int top= -1;
+  top= -1;
   }
   void push(int value){
-    if(top-size> 1){
+    if(size - top> 1){
+         top++;
          arr[top]=value;
-        top++;
+        
          
     }
     else{
@@ -47,7 +48,7 @@ class stack{
 int main(){
   stack st(10) ;
   st.push(5);
-  cout<< st.peek();
+  cout<< st.peek()<<endl;
   st.push(8);
   st.push(6);
   st.push(3);
