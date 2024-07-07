@@ -14,5 +14,8 @@ int main(){
     for(auto it =v.begin() ; it <v.end(); it++){
         cout<<*it<<endl ;
     }
+    for(int i = 0 ; i<n ; i++){
+        cout<<v[i]<<" ";
+    }
     return 0 ;
 }
