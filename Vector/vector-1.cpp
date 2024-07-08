@@ -1,5 +1,6 @@
 # include <iostream>
 # include <vector>
+#include <algorithm> 
 using namespace std; 
 
 int main(){
@@ -21,6 +22,12 @@ int main(){
     cout<<"front Element : " <<v.front() <<endl ;
     cout<<"Back Element : " <<v.back() <<endl ;
     cout<<"now we using the auto loop to display vector"<<endl ;
+    for(auto i : v){
+        cout<< i<< " " ;
+    }
+    cout<<endl;
+   sort(v.begin(),v.end());
+    cout<<"display sorted  vector"<<endl ;
     for(auto i : v){
         cout<< i<< " " ;
     }
