@@ -15,7 +15,7 @@ int findPeackElement( int arr[] , int size , int s , int e){
     }
 }
 int main(){
- int arr[] ={10 ,21,45,61,77,23,42,41} ;
+ int arr[] ={10 ,21,45,61,77,43,42,41} ;
   int size =8 ;
   int peak = findPeackElement(arr , size , 0 , size -1) ;
   cout<<" The peak Element is : " << peak <<endl ;
