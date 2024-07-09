@@ -4,7 +4,7 @@ using namespace std ;
 
 void reverse( int arr[] , int size , int s ,int e){
     
-    while(s>=e){
+    if(s>=e){
         return ;
     }
      int temp;
