@@ -11,6 +11,17 @@ int getMax( int arr[] , int size){
     return maxi ;
 }
 
+int getMin( int arr[] , int size){
+    int mini = INT_MAX ;
+    for (int i = 0; i < size; i++)
+    {
+         if(arr[i] < mini){
+            mini = arr[i] ;
+         }
+    }
+    return mini ;
+}
+
 void printArr(int arr[] , int size){
     for( int i= 0 ; i< size ; i++){
         cout<<arr[i] <<"  " ;
@@ -21,7 +32,9 @@ int main(){
 int arr[6] ={5,6,7,45,3,8} ;
 printArr( arr , 6);
 int maxiElement = getMax(arr , 6) ;
+int minElement = getMin(arr , 6) ;
 cout<<"Maxi Element is :"<<maxiElement <<endl;
+cout<<"Min Element is : " <<minElement <<endl ;
 
 return 0;
 }
