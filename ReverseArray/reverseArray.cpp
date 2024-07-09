@@ -2,17 +2,16 @@
 # include<iostream>
 using namespace std ;
 
-void reverse( int arr[] , int size){
-    int s=0 ;
-    int e=size-1;
-    while(s<=e){
-        int temp;
+void reverse( int arr[] , int size , int s ,int e){
+    
+    while(s>=e){
+        return ;
+    }
+     int temp;
         temp =arr[s] ;
         arr[s] = arr[e];
         arr[e] =temp ;
-        s++;
-        e--;
-    }
+        reverse(arr , size , s+1, e-1) ;
 }
 
 int main(){
@@ -21,7 +20,7 @@ int main(){
         cin>>arr[i] ;
 
     }
-     reverse(arr , 10) ;
+    reverse(arr , 10 , 0 , 9) ;
      for(int i =0 ; i<10 ; i++){
         cout<<arr[i] <<" " ;
      }
