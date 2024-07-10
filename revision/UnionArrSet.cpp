@@ -20,6 +20,7 @@ int main(){
      int arr2[] ={8,9,0,2,5,6,5,4};
      int m=8;
      int n=4;
+     cout<<" union of array"<<endl;
      arrUnion(arr1 ,arr2 , n , m) ;
     return 0;
 }
