@@ -2,23 +2,23 @@
 using namespace std;
 
 void miniHeight( int arr[] , int n , int k){
-    int ans;
     sort(arr , arr+n) ;
-      
-      
-     for( int i=1 ; i< n ; i++ ){
+      int mini=arr[0]-k;
+      int maxi=arr[n-1]+k;
+      int ans=arr[n-1] - arr[0] ;
+      int i ;
+     for(   i=1 ; i< n ; i++ ){
          
         
-        if((arr[i]-k) <=arr[0]){
-            arr[i] = arr[i]+k ;
+        if((arr[i]-k) <=0){
+        continue;
+    
         }
-        else {
-            arr[i] = arr[i]-k ;
-            }
+     
+      maxi=max(arr[n-1]-k , arr[i-1]+k);
+      mini=min(arr[0]+k , arr[i] - k);
+      ans=min(ans ,maxi-mini);
      }
-     arr[0] = arr[0]+k ;
-      sort(arr , arr+n) ;
-     ans =arr[n-1]-arr[0] ;
      cout<<"mini Height is : "<< ans <<" between " << arr[0]<<" and " <<arr[n-1] <<endl ;
 }
 void printArr(int arr[] , int size){
