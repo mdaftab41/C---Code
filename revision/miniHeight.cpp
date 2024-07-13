@@ -26,9 +26,9 @@ void printArr(int arr[] , int size){
 }
 
 int main(){
-int arr[6] = { 7, 4, 8, 8, 8, 9 };
-printArr( arr ,6);
-miniHeight(arr, 6 ,6 );
-printArr( arr , 6);
+int arr[6] = { 7, 7,3,4 };
+printArr( arr ,4);
+miniHeight(arr, 4 ,1 );
+printArr( arr , 4);
 return 0;
 }
