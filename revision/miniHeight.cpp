@@ -6,8 +6,7 @@ void miniHeight( int arr[] , int n , int k){
       int mini=arr[0]-k;
       int maxi=arr[n-1]+k;
       int ans=arr[n-1] - arr[0] ;
-     
-     for( int i=1 ; i< n ; i++ ){
+     for( int i=0 ; i< n ; i++ ){
          
         
         if((arr[i]-k) <=0){
@@ -19,6 +18,7 @@ void miniHeight( int arr[] , int n , int k){
       mini=min(arr[0]+k , arr[i] - k);
       ans=min(ans ,maxi-mini);
      }
+     sort(arr , arr+n) ;
      cout<<"mini Height is : "<< ans <<" between " << arr[0]<<" and " <<arr[n-1] <<endl ;
 }
 void printArr(int arr[] , int size){
