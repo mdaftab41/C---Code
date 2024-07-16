@@ -23,7 +23,7 @@ vector<int> nextPermutation(vector<int>& arr) {
 }
 
 int main() {
-    vector<int> arr = {1, 2, 3, 6, 5, 4};
+    vector<int> arr = {1, 2, 3};
 
     vector<int> nextPerm = nextPermutation(arr);
 
