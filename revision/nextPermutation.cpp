@@ -7,7 +7,7 @@ using namespace std;
 vector<int> nextPermutation(vector<int>& arr) {
     int N = arr.size();
     int i;
-    for (i = N - 2; i >= 0; --i) {
+    for (i = N - 2; i >=0; --i) {
         if (arr[i] < arr[i + 1]) break;
     }
     int j;
@@ -23,7 +23,7 @@ vector<int> nextPermutation(vector<int>& arr) {
 }
 
 int main() {
-    vector<int> arr = {1, 2, 3};
+    vector<int> arr = {3,2,1};
 
     vector<int> nextPerm = nextPermutation(arr);
 
