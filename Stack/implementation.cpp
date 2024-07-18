@@ -33,6 +33,10 @@ int main() {
   s.push(6);
   s.push(3);
   s.push(7);
+  s.push(15);
+  s.push(17);
+  s.push(14);
+
   cout << "Top of stack is before deleting any element " << s.Top() << endl;
   cout << "Size of stack before deleting any element " << s.Size() << endl;
   cout << "The element deleted is " << s.pop() << endl;
