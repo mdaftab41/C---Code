@@ -15,7 +15,7 @@ bool areRotations(string str1, string str2)
  
 int main()
 {
-    string str1 = "AACD", str2 = "ACDA";
+    string str1 = "AFTABALAM", str2 = "ACDA";
 
      
     if (areRotations(str1, str2))
