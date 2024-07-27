@@ -21,7 +21,7 @@ bool binarySearch( int arr[], int s , int e , int k ){
 
 int main(){
    int arr[8]={4,6,8,14,15,18,35,38};
-    int key = 34;
+    int key =35;
     int e= 8;
     int s=0;
     bool ans= binarySearch(arr , s, e , key );
