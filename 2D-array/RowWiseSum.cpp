@@ -16,8 +16,9 @@ int main(){
     }
     cout<<"Row Wise sum "<<endl;
     for(int i=0 ; i<4 ; i++){
+        sum =0 ;
         for(int j=0 ; j<4 ; j++){
-            sum+=sum ;
+            sum+=arr[i][j];
         }
         cout<< sum<<endl ;
     }
