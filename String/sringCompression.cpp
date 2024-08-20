@@ -5,7 +5,7 @@ using namespace std;
 int main(){
    // char word[80];  // this will hold 79 letters
    //vector<car>v (80);
-    cout << "Please enter a word: ";
+   // cout << "Please enter a word: ";
     //cin >> word;
     // char ch;
     // for( int i=0 ; i<80;i++){
