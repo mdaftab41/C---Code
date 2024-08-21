@@ -6,7 +6,7 @@ void compress(vector<char>&chars){
   int ansIndex=0;
   int n=chars.size();
   while(i<n){
-    int j=i+i;
+    int j=i+1;
     while(j<n &&chars[i]==chars[j]){
         j++;
     }
