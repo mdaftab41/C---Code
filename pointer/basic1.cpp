@@ -22,5 +22,10 @@ int main(){
     cout<<"the increment of the q does not effect the value of num and ptr"<<endl;
     cout<<"value of num after increment of q : "<<num<<endl ;
     cout<<"value of ptr after increment of q: "<<*ptr<<endl;
+    //copy the pointer 
+    cout<<"concept of how to copy the pointer"<<endl ;
+    int *ptr2=ptr ;
+    cout<<ptr<<"--->"<<ptr2<<endl;
+    cout<<*ptr<<"--->"<<*ptr2<<endl;
 return 0;
 }
