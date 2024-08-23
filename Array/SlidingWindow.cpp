@@ -27,8 +27,9 @@ int main(){
  int arr[12]={2,4,2,4,5,3,12,11,14,4,15,32} ;
  vector<int>ans=maxInSubarrays(arr , 12 ,3) ;
  for(int i=0 ; i<ans.size()  ; i++){
-    cout<<ans[i]<<" "<<endl ;
+    cout<<ans[i]<<" "  ;
  }
+ cout<<endl ;
 
     return 0;
 
