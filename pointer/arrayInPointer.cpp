@@ -16,5 +16,15 @@ int main(){
         //cout<<i<<" Element of array is : "<<*(arr+i)<<endl;
         cout<<i<<" Element of array is : "<<i[arr]<<endl;
     }
+
+    cout<<"Creating in Array "<<endl;
+    int temp[10]={12,41,31,51,78,96,65,45,61,91};
+    cout<<"size of array is : "<<sizeof(temp)<<endl;
+    cout<<"size of array is : "<<sizeof(&temp)<<endl;
+    cout<<"size of first element of array is : "<<sizeof(*temp)<<endl;
+    int *ptr=&temp[0] ;
+    cout<<"size of pointer is : "<<sizeof(ptr)<<endl;
+     cout<<"size of pointer's value is : "<<sizeof(*ptr)<<endl;
+    cout<<"size of address of pointer is : "<<sizeof(&ptr)<<endl;
     return 0;
 }
