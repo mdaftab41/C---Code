@@ -24,7 +24,28 @@ int main(){
     cout<<"size of first element of array is : "<<sizeof(*temp)<<endl;
     int *ptr=&temp[0] ;
     cout<<"size of pointer is : "<<sizeof(ptr)<<endl;
-     cout<<"size of pointer's value is : "<<sizeof(*ptr)<<endl;
+    cout<<"size of pointer's value is : "<<sizeof(*ptr)<<endl;
     cout<<"size of address of pointer is : "<<sizeof(&ptr)<<endl;
+    cout<<"Address of array is : "<<&temp[0]<<endl;
+    cout<<"Address of array is : "<<ptr<<endl;
+    cout<<"Address of array is : "<<*ptr<<endl;//value print kar raha hai
+    cout<<"Address of array is : "<<&ptr<<endl;
+    
+    cout<<"you can't change the content of symbol table"<<endl;
+
+    cout<<"creating new array "<<endl;
+    int array[5]={15,52,43,34,23};
+    cout<<"address of array is : "<<&array[0]<<endl;
+    //its give array but we do same thing in pointer 
+   // array=array+1;
+   // cout<<"address of array is : "<<&array[0]<<endl;
+   int *qtr=array ;
+   cout<<"address of pointer is : "<<qtr<<endl;
+   qtr=qtr+1;
+   cout<<"address of pointer+1 is : "<<qtr<<endl;
+
+
+
+
     return 0;
 }
