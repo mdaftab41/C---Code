@@ -5,12 +5,15 @@ bool isPalidrome( string str ){
      int start=0 ;
      int end=str.length()-1 ;
      while (start<=end)
-     {
-        if(str[start]!=str[end]){
+     {  if(!isalnum(str[start])) 
+            start++;
+        else if(!isalnum(str[end])) 
+            end--;
+        else if(tolower(str[start])!=tolower(str[end])){
             return false ;
         }
-        start++;
-        end--;
+         start++;
+         end--;
      }
      return true ;
      
