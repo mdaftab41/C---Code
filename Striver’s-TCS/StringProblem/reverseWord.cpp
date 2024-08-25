@@ -46,7 +46,8 @@ string result(string s)
         if (ch != ' ') {
             temp += ch;
         } else if (ch == ' ') {
-            if (ans!="") ans = temp + " " + ans;
+            if (ans!="") 
+            ans = temp + " " + ans;
             else ans = temp;
             temp = "";
         }
@@ -55,7 +56,8 @@ string result(string s)
     
     //If not empty string then add to the result(Last word is added)
     if (temp!="") {
-        if (ans!="") ans = temp + " " + ans;
+        if (ans!="") 
+        ans = temp + " " + ans;
         else ans = temp;
     }
     
