@@ -8,7 +8,7 @@ bool anagram( string str ,string s){
     }
     sort(str.begin(), str.end()) ;
     sort(s.begin(), s.end());
-      cout<<s<<"--> "<<str<<endl;
+      
 
     for(int i=0; i<str.size(); i++){
         str[i] = towlower(str[i]);
@@ -17,7 +17,7 @@ bool anagram( string str ,string s){
             return false ;
         }
     }
-    cout<<s<<" "<<str<<endl;
+  
     return true ;
 }
 
