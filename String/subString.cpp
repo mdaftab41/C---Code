@@ -30,5 +30,8 @@ int main() {
   string pattern = "forward";
   int foundIdx = foundPattern(text, pattern);
   cout << "The substring starts from the index: "<<foundIdx << endl;
+  cout<<"subString using the inbuild function"<<endl<<endl ;
+  auto FoundIdx = text.find(pattern);
+  cout <<"The substring starts from the index: " <<FoundIdx << endl;
   return 0;
 }
