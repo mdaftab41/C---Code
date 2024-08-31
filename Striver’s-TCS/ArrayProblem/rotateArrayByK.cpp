@@ -9,7 +9,6 @@ void reverse(int *arr , int start ,int end){
     }
     
 }
-
 void rotateArray( int *arr, int n, int k){
     //Reverse the first 0 to k-1 element 
       reverse(arr , 0 , k-1) ;
@@ -22,6 +21,23 @@ void rotateArray( int *arr, int n, int k){
         cout<<arr[i] <<" " ;
     }
     cout<<endl;
+}
+
+void rotateByK( int arr[] , int n, int k){
+
+    int temp[n] ;
+    for( int i=n-k-1 ; i < n ; i++){
+        temp[i-n+k+1]=arr[i] ;//starting from temp 0 to k-1
+       // cout<<temp[i-n+k+1]<<"  =======" ;
+    }
+    for( int i= 0 ; i< n-k-1; i++){
+        temp[k+i+1]=arr[i] ;
+        //cout<<temp[k+i+1]<<"--" ;
+    }
+    for(int i=0 ; i<n ;i++){
+        
+        cout<<temp[i]<<" " ;
+    }cout<<endl;
 }
 
 int main(){
@@ -37,5 +53,7 @@ int main(){
     cout<<"Enter the number to rotate the Array"<<endl;
     cin>>k ;
 rotateArray(arr ,n,k) ;
+ int arr1[] = {1, 2, 3, 4, 5, 6, 7};
+rotateByK(arr1 , 7, k) ;
 return 0 ;
 }
