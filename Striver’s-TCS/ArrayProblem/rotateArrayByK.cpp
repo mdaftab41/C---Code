@@ -24,7 +24,11 @@ void rotateArray( int *arr, int n, int k){
 }
 
 void rotateByK( int arr[] , int n, int k){
-
+     if (n == 0)
+        return;
+      k = k % n;
+     if (k > n)
+        return;
     int temp[n] ;
     for( int i=n-k-1 ; i < n ; i++){
         temp[i-n+k+1]=arr[i] ;//starting from temp 0 to k-1
