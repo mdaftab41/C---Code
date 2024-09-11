@@ -12,5 +12,5 @@ int n ;
 cout<<"Enter the no"<<endl;
 cin>>n;
 int m=fib(n);
-cout<<"Fabanoicce series "<<m<<endl;
+cout<<"Fabonacci series "<<m<<endl;
 }
