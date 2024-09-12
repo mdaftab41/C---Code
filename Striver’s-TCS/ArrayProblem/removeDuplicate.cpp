@@ -22,10 +22,22 @@ void removeDuplicateFromArray(int *arr , int n){
         s.insert(arr[i]) ;
     }
     for(auto i: s){
-        cout<<i <<" " ;
+        cout<<i <<" " <<endl ;
     }
 }
 
+
+//remove duplicate from array using set / map 
+int removeDuplicateTwoPointer( int arr[] , int n){
+    int i=0 ;
+    for(int j=i ; j<n ; j++){
+        if(arr[j]!=arr[i]){
+            arr[i+1]=arr[j] ;
+            i++ ;
+        }
+    }
+    return i+1 ;
+}
 
 int main(){
     int n;
@@ -44,5 +56,11 @@ int main(){
     cout<<endl;
    cout<<"using set STL "<<endl;
     removeDuplicateFromArray(arr , n) ;
+    cout<<"using Two Pointer Approch "<<endl;
+    int size1=removeDuplicateTwoPointer(arr ,n) ;
+    for(int i=0 ; i<size1 ; i++){
+        cout<<arr[i]<<" " ;
+    }
+    cout<<endl;
     return 0 ;
 }
