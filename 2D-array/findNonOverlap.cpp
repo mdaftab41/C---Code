@@ -19,9 +19,31 @@ using namespace std;
     return ans;
 }
 
+vector<vector<int>> mergeOverlap(vector<vector<int>>& arr) {
+    int n = arr.size();
+    
+    // Sort intervals based on their start times
+    sort(arr.begin(), arr.end());
+
+    vector<vector<int>> ans; // To store merged intervals
+
+    for (int i = 0; i < n; i++) {
+        // If ans is empty or the current interval does not overlap with the last one
+        if (ans.empty() || arr[i][0] > ans.back()[1]) {
+            ans.push_back(arr[i]); // No overlap, so add current interval
+        } else {
+            // Overlapping intervals: merge them by updating the end time
+            ans.back()[1] = max(ans.back()[1], arr[i][1]);
+        }
+    }
+    
+    return ans;
+}
+
 
 int main() {
-    vector<vector<int>> v{{1, 3}, {2, 6}, {8, 9}, {9, 11}, {8, 10}, {2, 4}, {15, 18}, {16, 17}};
+    //vector<vector<int>> v   {{1, 3}, {2, 6}, {8, 9}, {9, 11}, {8, 10}, {2, 4}, {15, 18}, {16, 17}};
+    vector<vector<int>> v   { { 1, 3 }, { 2, 4 },{ 3, 5 },{ 7, 9 } };
     
     cout << "Original Intervals:" << endl;
     for (int i = 0; i < v.size(); i++) {
@@ -30,12 +52,23 @@ int main() {
         }
         cout << endl;
     }
-    cout << endl;
-    vector<vector<int>> result=findNonOverlap(v);
-    cout << "findNonOverlap Intervals :" << endl;
+    
+    //vector<vector<int>> result = mergeInterval(v);
+    vector<vector<int>> result=mergeOverlap(v);
+    cout << "Merged Intervals:" << endl;
     for (int i = 0; i < result.size(); i++) {
         for (int j = 0; j < 2; j++) {
             cout << result[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    cout << endl;
+    vector<vector<int>> result1=findNonOverlap(v);
+    cout << "findNonOverlap Intervals :" << endl;
+    for (int i = 0; i < result1.size(); i++) {
+        for (int j = 0; j < 2; j++) {
+            cout << result1[i][j] << " ";
         }
         cout << endl;
     }
