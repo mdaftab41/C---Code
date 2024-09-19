@@ -6,6 +6,8 @@ struct Node
    int data; 
    struct Node *next;  
 };  
+
+//creating function to push node in linkList
 void push ( struct Node** head, int nodeData )  
 {  
    struct Node* newNode1 = new Node;  
