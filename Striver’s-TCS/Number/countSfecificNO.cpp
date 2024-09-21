@@ -28,8 +28,6 @@ int countSpecificNumber( int m , int n){
         if(flag==true){
             count++ ;
         }
-        
-     
     }
     return count;
 }
