@@ -61,6 +61,7 @@ cout<<"null";
 int main ()   
 {  
 struct Node* head = NULL;  
+append ( &head, 45 );  
 append ( &head, 15 );   
 push ( &head, 25 );   
 push ( &head, 35 );   
