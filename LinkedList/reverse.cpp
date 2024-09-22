@@ -38,6 +38,7 @@ Node* reverseList(Node* head) {
 }
 
 void printList(Node* node) {
+    cout<<"printing Link List"<<endl;
     while (node != nullptr) {
         cout << " " << node->data;
         node = node->next;
@@ -52,6 +53,8 @@ int main() {
     head->next->next = new Node(3);
     head->next->next->next = new Node(4);
     head->next->next->next->next = new Node(5);
+    head->next->next->next->next->next = new Node(6);
+    head->next->next->next->next->next->next = new Node(7);
 
     cout << "Given Linked list:";
     printList(head);
