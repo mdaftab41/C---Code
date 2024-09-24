@@ -2,8 +2,9 @@
 using namespace std ;
 
 vector<vector<int>>mergeInterval(vector<vector<int>>&arr , vector<int>&newInterval){
-    int n = arr.size() ;
+    
     arr.push_back(newInterval) ;
+     int n = arr.size() ;
     vector<vector<int>>ans ;
     sort(arr.begin() , arr.end()) ;
     for( int i=0 ; i<n ; i++){
@@ -18,7 +19,7 @@ vector<vector<int>>mergeInterval(vector<vector<int>>&arr , vector<int>&newInterv
 
 int main(){
     vector<vector<int>>arr{{2,6} ,{3,7},{7,10} , {11 ,14}, {13 ,17} ,{18 ,22} ,{21,27}} ;
-    vector<int>interval ;
+    vector<int>interval(2) ;
     cout<<"Inter interval to insert"<<endl;
      for(int i = 0; i < 2; i++) {
         cin >> interval[i];
