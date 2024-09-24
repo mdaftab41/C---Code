@@ -30,6 +30,8 @@ int main(){
    v1.push_back(14);
    v1.push_back(18);
    v1.push_back(28);
+    cout<<"print the  array"<<endl;
+   vprint(v1);
 
    vector<int> ans= reverse(v1);
    cout<<"print the reverse array"<<endl;
