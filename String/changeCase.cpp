@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
-
+#include<string>
+//#include <cctype>
 using namespace std;
 void solve(string str, int n) {
 
