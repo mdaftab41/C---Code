@@ -1,1 +1,1 @@
- // Example intervals
+sum / count
