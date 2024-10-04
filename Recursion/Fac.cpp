@@ -12,6 +12,7 @@ int factorial(int n){
 int main(){
     int m;
     cin>> m;
+    cout<<"Recursion Call"<<endl;
     int ans=factorial(n);
     cout<<ans<<endl;
     return 0;
