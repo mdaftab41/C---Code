@@ -30,8 +30,8 @@ int main(){
     cout<< " Size of obj2 : " << sizeof(obj2) <<endl ;
      
    // obj1.name="Aftabalam";
-    obj1.rollNo= 19;
-    obj1.Marks =95;
+    obj1.rollNo= 45;
+    obj1.Marks =85;
     obj1.subject=" English";
     obj1.setName("AftabAlam");
     obj1.setState("Bihar");
