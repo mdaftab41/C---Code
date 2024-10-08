@@ -22,6 +22,26 @@ vector<int> FindMissingAndRepeating(vector<int>&arr){
         return {missing , repeated} ;
 }
 
+// vector<int> findTwoElement(vector<int>& arr) {
+//         int n=arr.size() ;
+//         vector<bool>visited(n+1 ,0) ;
+//         int missing =-1 ;
+//         int repeated=-1;
+//         for( int i=0 ; i< n; i++){
+//             if(visited[arr[i]]){
+//                 repeated=arr[i] ;
+//             }
+//             visited[arr[i]]=1;
+//         }
+//         for( int i=1 ; i<=n ; i++){
+//             if(!visited[i]){
+//                missing=i ; 
+//                break ;
+//             }
+//         }
+//         return { repeated ,missing } ;
+//     }
+
 int main(){
     vector<int> arr = {1, 3, 3, 4, 5, 6, 7}; // Example array
     vector<int> result = FindMissingAndRepeating(arr);
