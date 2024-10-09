@@ -1,10 +1,16 @@
-#include <iostream>
+
+/*Two words are anagrams of one another if their letters can be rearranged to form the other word.
+Given a string, split it into two contiguous substrings of equal length.
+ Determine the minimum number of characters to change to make the two substrings into anagrams of one another. 
+*/
+
+ #include <bits/stdc++.h>
 #include <unordered_map>
 #include <vector>
 #include <string>
 using namespace std;
 
-int anagram(const string& s) {
+int anagram(const string &s) {
     int n = s.length();
 
     // Check if the length of the string is odd
@@ -58,4 +64,3 @@ int main() {
 
     return 0;
 }
- 
