@@ -19,5 +19,10 @@ double myPow(double x, int n) {
 }
 
 int main() {
-  cout << myPow(2, 10) << endl;
+    int n , m;
+    cout<<"Enter the Number"<<endl;
+    cin>>n ;
+    cout<<"Enter the power"<<endl;
+    cin>>m ;
+  cout << myPow(n, m) << endl;
 }
