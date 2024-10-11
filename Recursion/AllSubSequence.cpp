@@ -22,7 +22,7 @@ int main()
 {
 
 
-	string s="abc";
+	string s="Aftab";
 	vector<string>ans = AllPossibleStrings(s);
 	//printint all the subsequence.
 	cout<<"All possible subsequences are "<<endl;
