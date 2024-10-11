@@ -22,13 +22,13 @@ void merge(vector<int>&arr , int s , int e , int mid){
          temp.push_back(arr[right]) ;
          right++;
     }
-  for( int i= 0 ; i<arr.size() ; i++){
+  for( int i= 0 ; i<temp.size() ; i++){
     arr[s+i] =temp[i] ;
   }
 }
 
 void mergeSort( vector<int>&arr , int s , int e ){
-    if(s>=e) return ;
+    if(s>=e) return;
     int mid=s+(e-s)/2;
     mergeSort(arr ,s , mid ) ;
     mergeSort(arr , mid+1 ,e) ;
