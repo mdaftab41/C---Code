@@ -23,8 +23,13 @@ void selection_sort(int arr[], int n) {
 
 }
 int main() {
-  int arr[] = {13,46,24,52,20,9};
-  int n = sizeof(arr) / sizeof(arr[0]);
+  int n ;
+  cout<<"Enter size "<<endl;
+  cin>>n ;
+  int arr[n] ;
+  for (int i = 0; i < n; i++) {
+    cin>>arr[i];
+  }
    cout << "Before selection sort: " << "\n";
    for (int i = 0; i < n; i++) {
     cout << arr[i] << " ";
