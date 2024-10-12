@@ -30,11 +30,15 @@ bool isIsomorphic(string s, string t) {
 
         for(int i=0;i<s.length();i++){
             if(v1[s[i]]!=v2[t[i]]){
+                cout<<"not match"<<endl;
+                cout<< v1[s[i]]<<" "<<s[i] <<"  "<<v2[t[i]]<<" "<<t[i]<<endl;
                 return false;
+                 
             }
 
             v1[s[i]]=i+1;
             v2[t[i]]=i+1;
+            cout<<v1[s[i]]<<"--"<<i+1 <<" "<<s[i]<<"   "<<v2[t[i]]<<" "<<t[i]<<"--" <<i+1<<endl;
         }
 
         return true;
