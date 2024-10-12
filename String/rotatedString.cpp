@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 bool rotateString(string s, string goal) {
