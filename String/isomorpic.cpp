@@ -46,8 +46,8 @@ bool isIsomorphic(string s, string t) {
     }
 
 int main() {
-    string s = "afrtb";
-    string t = "manmg";
+    string s = "egg";
+    string t = "adh";
     
     bool result = isIsomorphic(s, t);
     
