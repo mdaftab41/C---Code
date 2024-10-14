@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include <string>
 using namespace std;
 
@@ -21,13 +21,14 @@ int strStr(string haystack, string needle) {
             if (temp.size() > m) {
                 temp.erase(temp.begin(), temp.begin() + 1);
             }
-        } else if (temp == needle && temp.size() == m) {
-            return i - m;
         }
-    }
-    
-    if (temp == needle && temp.size() == m) {
-        return n - m;
+        
+        // Debugging output to track current temp and index
+        cout << "Current temp: " << temp << " at index " << i << endl;
+
+        if (temp == needle && temp.size() == m) {
+            return i - m + 1;  // Adjusted to return correct starting index
+        }
     }
     
     return -1;
@@ -36,9 +37,9 @@ int strStr(string haystack, string needle) {
 int main() {
     string haystack, needle;
     cout << "Enter the haystack string: ";
-    cin >> haystack;
+    getline(cin, haystack);  // Using getline for full input
     cout << "Enter the needle string: ";
-    cin >> needle;
+    getline(cin, needle);    // Using getline for full input
     
     int result = strStr(haystack, needle);
     cout << "Output: " << result << endl;
