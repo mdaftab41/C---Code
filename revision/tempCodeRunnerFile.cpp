@@ -1,1 +1,1 @@
-sum / count
+// Output the congenial node or -1 if none exists
