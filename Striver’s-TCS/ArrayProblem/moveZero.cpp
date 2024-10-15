@@ -3,6 +3,7 @@ using namespace std;
 
  // function to move All Zero in left of Zero
  void moveZero(int arr[] , int n){
+    cout<<"function call"<<endl'
     //two pointer Approch
     int j=0 ;
     for( int i=0 ; i<n ; i++){
