@@ -18,7 +18,7 @@ int main( ) {
     ans.pop();
      cout<<"printig the top element "<<ans.top() <<endl;
     ans.pop();
-     cout<<"printig the top element "<<ans.top() <<endl;
+     cout<<"printig the top  "<<ans.top() <<endl;
     ans.pop();
      cout<<"printig the top element "<<ans.top() <<endl;
     // ans.pop();
