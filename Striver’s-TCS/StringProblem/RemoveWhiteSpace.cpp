@@ -29,6 +29,7 @@ string removeWhiteSpaceFun( char str[]){// work like a array
   return str ;
 }
 int main() {
+  cout<<"Remove white space "<<endl;
   char str[] = "Take you forward";
   cout << removeSpaces(str)<<endl;
   cout<<removeWhiteSpaceFun(str)<<endl;
