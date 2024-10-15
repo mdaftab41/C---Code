@@ -57,7 +57,7 @@ int main(){
     cout<<"Enter the number to rotate the Array"<<endl;
     cin>>k ;
 rotateArray(arr ,n,k) ;
- int arr1[] = {1, 2, 3, 4, 5, 6, 7};
+ int arr1[] = {1, 2, 3, 7, 9, 21,2 8};
 rotateByK(arr1 , 7, k) ;
 return 0 ;
 }
