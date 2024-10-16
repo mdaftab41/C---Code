@@ -1,51 +1,52 @@
-#include <bits/stdc++.h>
+ #include <bits/stdc++.h>
 using namespace std;
 
-void findCombination( int ind , int target , vector<int>arr, vector<vector<int>>&ans , vector<int>result){
-    if(ind==arr.size()){
-        if(target==0){
-            ans.push_back(result) ;
+void findCombination(int ind, int target, vector<int> arr, vector<vector<int>>& ans, vector<int> result) {
+    if (ind == arr.size()) {
+        if (target == 0) {
+            ans.push_back(result);
         }
-        return ;
+        return;
     }
-    //pick up the element 
-    if(arr[ind]<=target){
-        result.push_back(arr[ind]) ;
-        findCombination(ind , target-arr[ind] , arr , ans ,result) ;
-        result.pop_back() ;
+    // pick up the element
+    if (arr[ind] <= target) {
+        result.push_back(arr[ind]);
+        findCombination(ind, target - arr[ind], arr, ans, result);
+        result.pop_back();
     }
-     findCombination(ind+1 , target, arr , ans ,result) ;
+    findCombination(ind + 1, target, arr, ans, result);
 }
 
-vector<vector<int>>combinationSum( vector<int>condidate ,int target){
-    vector<vector<int>>ans;
-    vector<int>result ;
-    findCombination(0 , target , condidate , ans ,result) ;
-    return ans ;
+vector<vector<int>> combinationSum(vector<int> candidate, int target) {
+    vector<vector<int>> ans;
+    vector<int> result;
+    findCombination(0, target, candidate, ans, result);
+    return ans;
 }
 
-int main(){
-    int n ;
-    cout<<"Enter the size"<<endl;
-    cin>>n ;
-     
-    cout<<"enter the target"<<endl;
-    vector<int>arr(n) ;
-    cout<<"Enter the Element of Array"<<endl ;
-    for( int i=0 ; i<n ; i++){
-        cin>>arr[i] ;
+int main() {
+    int n, m;
+    cout << "Enter the size of the array: ";
+    cin >> n;
+
+    vector<int> arr(n);
+    cout << "Enter the elements of the array: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
-    int m ;
-    cout<<"enter the target"<<endl;
-    cin>>m ;
-    vector<vector<int>>ans=combinationSum(arr ,m) ;
-    for( int i= 0 ; i<ans.size() ; i++){
-        for( int j=0 ; j<ans[0].size() ; j++){
-            cout<<ans[i][j]<<" " ;
+
+    cout << "Enter the target value: ";
+    cin >> m;
+
+    vector<vector<int>> ans = combinationSum(arr, m);
+
+    cout << "Combinations that sum to " << m << " are:\n";
+    for (auto combination : ans) {
+        for (int num : combination) {
+            cout << num << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
 
-
-    return 0 ;
+    return 0;
 }
