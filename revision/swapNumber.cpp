@@ -5,14 +5,15 @@ int main()
 {
     int a=8;
     int b=15;
-   /* a=a^b;
+  /*  a=a^b;
     b=a^b;
     a=a^b ; 
     */
+    
     a=a+b;
     b=a-b;
     a=a-b ;
-    cout<<a<<" "<<b<<endl;
+    cout<<"a = "<<a<<" "<<"b = " <<b<<endl;
 
     return 0;
 }
