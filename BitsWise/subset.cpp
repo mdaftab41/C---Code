@@ -20,7 +20,7 @@ int main(){
     int m ; 
     cout<<"Enter the array Size"<<endl;
     cin>>m ;
-    cout<<"Enter the Array"<<endl;
+    cout<<"Enter the Array elament"<<endl;
     vector<int>arr(m);
     for( int i=0 ; i<m; i++){
     cin>>arr[i] ;
