@@ -2,14 +2,15 @@
 using namespace std ;
 
 int findPower(int n){
-    int ans ;
+     
 while(n>=0){
     if(n==0){
-        ans= 1 ;
+        return 1 ;
+        break ;
     }
-     ans= 2*findPower(n-1) ;
+     return  2*findPower(n-1) ;
 }
-return ans ;
+ 
 }
 
 int main(){
