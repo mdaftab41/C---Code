@@ -12,6 +12,7 @@ bool linearSearch( int arr[] , int key , int size){
 }
 
 
+
 int main(){
     int n , key ;
     cout<<"Enter the size of array"<<endl;
@@ -28,5 +29,8 @@ int main(){
     }else{
          cout<<"Key Not found in Array" <<endl ;
     }
+
+
+    int index =search(arr ,n , key) ;
     return 0 ;
 }

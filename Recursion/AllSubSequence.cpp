@@ -18,6 +18,8 @@ vector<string> AllPossibleStrings(string s) {
 	sort(ans.begin(), ans.end());
 	return ans;
 }
+  
+
 int main()
 {
 
@@ -29,5 +31,5 @@ int main()
 	for (auto it : ans) {
 		cout << it << " ";
 	}
-
+  
 }
