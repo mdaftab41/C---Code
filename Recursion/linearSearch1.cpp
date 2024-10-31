@@ -12,6 +12,24 @@ bool linearSearch( int arr[] , int key , int size){
 }
 
 
+//function return index of element 
+int search1(int arr[], int n, int x ,int cnt) {
+    
+    if(n==0){
+        return -1 ;
+    }
+    if(arr[0]==x){
+        return cnt ;
+    }
+    return search1(arr+1 , n-1 , x ,cnt+1) ;
+     
+}
+int search(int arr[], int n, int x) {
+    int cnt=0;
+    return search1(arr , n, x ,cnt) ;
+     
+}
+
 
 int main(){
     int n , key ;
@@ -30,7 +48,8 @@ int main(){
          cout<<"Key Not found in Array" <<endl ;
     }
 
-
+    
     int index =search(arr ,n , key) ;
+    cout<<"Index of Element :  " <<index<<endl;
     return 0 ;
 }
