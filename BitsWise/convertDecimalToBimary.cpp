@@ -11,16 +11,32 @@ string DecToBinary( int n){
         }
         n=n/2 ;
     }
+    reverse(str.begin() , str.end()) ;
     return str ;
 }
 
+int BinaryToDec(string str){
+    int n =str.length();
+    int p2=1 ,num=0 ;
+    for( int i=0 ; i<n ; i++){
+        if(str[i] =='1'){
+            num+=p2 ;
+        }
+        p2=2*p2 ;
+    }
+    return num ;
+}
 
 int main(){
     int n ;
-    cout<<"Enter the va;ue of n " <<endl;
+    cout<<"Enter the value of n " <<endl;
     cin>> n ;
     string temp=DecToBinary(n) ;
     cout<<"Binary of "<<n <<"  is : " ;
-    cout<<temp ;
+    cout<<temp <<endl;
+    cout<<" Decimal of  "<<temp<<" is : ";
+     reverse(temp.begin() , temp.end());
+    int ans=BinaryToDec(temp) ;
+    cout<<ans<<endl;
     return 0 ;
 }
