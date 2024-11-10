@@ -20,6 +20,7 @@ int main(){
     cout<<"Enter the va;ue of n " <<endl;
     cin>> n ;
     string temp=DecToBinary(n) ;
+    cout<<"Binary of "<<n <<"  is : " ;
     cout<<temp ;
     return 0 ;
 }
