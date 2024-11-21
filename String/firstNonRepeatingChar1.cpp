@@ -3,6 +3,7 @@
 using namespace std;
 
 // Function to find the first non-repeating character in a string.
+//optimal solution 
     char NonRepeatingChar(string &s) {
            vector<int>hash(26 ,0) ;
            for( int i= 0 ; i<s.size() ; i++){
