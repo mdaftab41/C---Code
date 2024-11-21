@@ -3,6 +3,24 @@
 using namespace std;
 
 // Function to find the first non-repeating character in a string.
+    char NonRepeatingChar(string &s) {
+           vector<int>hash(26 ,0) ;
+           for( int i= 0 ; i<s.size() ; i++){
+               hash[s[i]-'a']++ ;
+           }
+             for( int j=0 ; j<s.size() ; j++){
+                 if( hash[s[j]-'a']==1){
+                      return s[j]  ;
+                 }
+             }
+              
+         return '$' ;
+    }
+
+
+
+
+// Function to find the first non-repeating character in a string.
 char nonRepeatingChar(string &s) {
     // Loop through each character of the string
     for (int i = 0; i < s.size(); i++) {
