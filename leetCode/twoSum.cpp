@@ -2,6 +2,38 @@
  
 using namespace std;
 
+
+
+
+// vector<pair<int,int>> twoSum(vector<int>& nums, int target, int n)
+// { 
+//      unordered_map<int, int> freq;  
+//     vector<pair<int, int>> result;
+//   bool count= false ;
+//     for (int num : nums) {
+//         int complement = target - num;
+
+         
+//         if (freq[complement] > 0) {
+// 			count=1 ;
+//             result.push_back({num, complement});
+//             freq[complement]--;  
+//         } else {
+//             freq[num]++;  
+//         }
+//     }
+//     if(count==1){
+// return result;
+// 	}else{
+// 		return{ {-1 ,-1}}   ;
+// 	}
+     
+// }
+
+
+
+
+
 vector<pair<int, int>> twoSum(vector<int>& nums, int target, int n) { 
     unordered_map<int, int> freq;   
     vector<pair<int, int>> result;
