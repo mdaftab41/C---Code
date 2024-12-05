@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+ #include<bits/stdc++.h>
 using namespace std;
 // int main()
 // {
@@ -22,7 +22,7 @@ using namespace std;
 //     while(st.size()!=1)
 //     {
 //         ans+=st.top()+" ";
-//         st.pop();
+//         st.pop(); j
 //     }
 //     ans+=st.top();// The last word should'nt have a space after it
 //     cout<<"After reversing words: "<<endl;
@@ -55,7 +55,7 @@ using namespace std;
 //         left++;
 //     }
     
-//     //If not empty string then add to the result(Last word is added)
+//     //If not empty string then add to the res   ult(Last word is added)
 //     if (temp!="") {
 //         if (ans!="") 
 //         ans = temp + " " + ans;
