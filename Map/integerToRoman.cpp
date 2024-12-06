@@ -26,7 +26,6 @@ map<int, string> ans;
             }else{
                 it++;
             }
-
        }
      return temp;
 
