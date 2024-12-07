@@ -23,8 +23,8 @@ public:
 };
 
 int main() {
-    Solution solution;// creating object of class Solution 
-    vector<int> arr = {1, 2, 3, 7, 1, 2, 4}; // Example array
+    Solution solution;// creating object of class Solution                  
+    vector<int> arr = {1, 2, 3, 7, 1, 2, 4}; // Example array     
     int k = 7;                              // Target sum
     cout << "Length of longest subarray with sum " << k << " is: " 
          << solution.lenOfLongestSubarr(arr, k) << endl;
