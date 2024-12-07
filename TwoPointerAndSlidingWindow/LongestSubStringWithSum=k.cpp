@@ -5,7 +5,7 @@ using namespace std;
 
 class Solution {
 public:
-    int lenOfLongestSubarr(vector<int>& arr, int k) {
+    int lenOfLongestSubarr(vector<int>arr, int k) {
         int sum = 0;        // Current sum of the subarray
         int maxlen = 0;     // Maximum length of subarray with sum k
 
