@@ -1,8 +1,24 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include <unordered_set>
 #include <string>
 #include <climits>
 using namespace std;
+
+
+ int lengthOfLongestSubstring(string s) {
+        int maxlen=0 ;
+        for(int i=0 ; i<s.size() ; i++){
+            vector<int>hash(256 , 0) ;
+            for( int j=i ; j<s.size() ; j++){
+                if(hash[s[j]]==1){   break  ;} 
+               
+              maxlen=max(maxlen , j-i+1) ;
+               hash[s[j]]++ ;
+            }
+            
+        }
+        return maxlen ;
+    }
 
 // Function to find the length of the longest substring without repeating characters
 int solve(string str) {
@@ -40,5 +56,6 @@ int solve(string str) {
 int main() {
     string str = "abcabcbb";
     cout << "Length of the longest substring without repeating characters: " << solve(str) << endl;
+    cout<<"printing using vector consept" <<lengthOfLongestSubstring(str)<<endl;
     return 0;
 }
